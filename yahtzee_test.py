@@ -1,7 +1,7 @@
 import unittest
 
 from yahtzee import *
-from yahtzee import fours
+from yahtzee import fours, sixes
 
 
 class YahtzeeTestCase(unittest.TestCase):
@@ -21,6 +21,10 @@ class YahtzeeTestCase(unittest.TestCase):
 
     def test_fives(self):
         self.assertEqual(10, fives([1, 4, 5, 3, 5]))
+
+    def test_sixes(self):
+        self.assertEqual(12, sixes([6, 6, 5, 3, 5]))
+
 
 if __name__ == '__main__':
     unittest.main()
