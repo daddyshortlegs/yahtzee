@@ -1,17 +1,20 @@
 def ones(rolls):
-    return sum(filter(lambda roll: roll == 1, rolls))
+    return score_singles(rolls, 1)
 
 def twos(rolls):
-    return sum(filter(lambda roll: roll == 2, rolls))
+    return score_singles(rolls, 2)
 
 def threes(rolls):
-    return sum(filter(lambda roll: roll == 3, rolls))
+    return score_singles(rolls, 3)
 
 def fours(rolls):
-    return sum(filter(lambda roll: roll == 4, rolls))
+    return score_singles(rolls, 4)
 
 def fives(rolls):
-    return sum(filter(lambda roll: roll == 5, rolls))
+    return score_singles(rolls, 5)
 
 def sixes(rolls):
-    return sum(filter(lambda roll: roll == 6, rolls))
+    return score_singles(rolls, 6)
+
+def score_singles(rolls, value):
+    return sum(filter(lambda roll: roll == value, rolls))
