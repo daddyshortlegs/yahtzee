@@ -9,3 +9,6 @@ def threes(rolls):
 
 def fours(rolls):
     return sum(filter(lambda roll: roll == 4, rolls))
+
+def fives(rolls):
+    return sum(filter(lambda roll: roll == 5, rolls))

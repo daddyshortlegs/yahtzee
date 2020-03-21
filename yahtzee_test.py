@@ -19,6 +19,8 @@ class YahtzeeTestCase(unittest.TestCase):
     def test_fours(self):
         self.assertEqual(8, fours([1, 4, 2, 3, 4]))
 
+    def test_fives(self):
+        self.assertEqual(10, fives([1, 4, 5, 3, 5]))
 
 if __name__ == '__main__':
     unittest.main()
