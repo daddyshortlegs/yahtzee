@@ -24,6 +24,9 @@ class YahtzeeTestCase(unittest.TestCase):
     def test_sixes(self):
         self.assertEqual(12, sixes([6, 6, 5, 3, 5]))
 
+    def test_pair(self):
+        self.assertEqual(8, pair([3, 3, 3, 4, 4]))
+
     def test_three_of_a_kind(self):
         self.assertEqual(9, three_of_a_kind([3, 3, 3, 4, 5]))
         self.assertEqual(0, three_of_a_kind([1, 2, 3, 4, 5]))

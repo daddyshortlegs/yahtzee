@@ -33,6 +33,12 @@ def four_of_a_kind(dice):
 
     return 0
 
+def pair(dice):
+    counts = count_dice(dice)
+    if 2 in counts:
+        return (counts.index(2) + 1) * 2
+
+    return 0
 
 
 
