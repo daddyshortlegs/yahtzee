@@ -19,25 +19,19 @@ def sixes(rolls):
 def score_singles(rolls, value):
     return sum(filter(lambda roll: roll == value, rolls))
 
-def three_of_a_kind(dice):
-    counts = count_dice(dice)
-    if 3 in counts:
-        return (counts.index(3) + 1) * 3
+def pair(dice):
+    return x_of_a_kind(dice, 2)
 
-    return 0
+def three_of_a_kind(dice):
+    return x_of_a_kind(dice, 3)
 
 def four_of_a_kind(dice):
+    return x_of_a_kind(dice, 4)
+
+def x_of_a_kind(dice, value_count):
     counts = count_dice(dice)
-    if 4 in counts:
-        return (counts.index(4) + 1) * 4
-
-    return 0
-
-def pair(dice):
-    counts = count_dice(dice)
-    if 2 in counts:
-        return (counts.index(2) + 1) * 2
-
+    if value_count in counts:
+        return (counts.index(value_count) + 1) * value_count
     return 0
 
 
