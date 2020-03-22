@@ -35,18 +35,17 @@ def x_of_a_kind(dice, value_count):
     return 0
 
 def small_straight(dice):
-    if count_dice(dice) == [1, 1, 1, 1, 1, 0]:
-        return sum(dice)
+    return calc_straight([1, 1, 1, 1, 1, 0], dice)
 
-    return 0
 
 def large_straight(dice):
-    if count_dice(dice) == [0, 1, 1, 1, 1, 1]:
+    return calc_straight([0, 1, 1, 1, 1, 1], dice)
+
+
+def calc_straight(counts, dice):
+    if count_dice(dice) == counts:
         return sum(dice)
-
     return 0
-
-
 
 def yahtzee(dice):
     if 5 in count_dice(dice):
