@@ -37,15 +37,22 @@ def x_of_a_kind(dice, value_count):
 def small_straight(dice):
     return calc_straight([1, 1, 1, 1, 1, 0], dice)
 
-
 def large_straight(dice):
     return calc_straight([0, 1, 1, 1, 1, 1], dice)
-
 
 def calc_straight(counts, dice):
     if count_dice(dice) == counts:
         return sum(dice)
     return 0
+
+def full_house(dice):
+    two = pair(dice)
+    three = three_of_a_kind(dice)
+    if two != 0 and three != 0:
+        return two + three
+
+    return 0
+
 
 def yahtzee(dice):
     if 5 in count_dice(dice):
@@ -56,13 +63,13 @@ def yahtzee(dice):
 
 
 
+
 def count_dice(dice):
     result = [0, 0, 0, 0, 0, 0]
     for die in dice:
         result[die - 1] += 1
 
     return result
-
 
 
 

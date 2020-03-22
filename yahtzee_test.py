@@ -2,7 +2,6 @@ import unittest
 
 from yahtzee import *
 
-
 class YahtzeeTestCase(unittest.TestCase):
     def test_ones(self):
         self.assertEqual(2, ones([1, 1, 2, 3, 4]))
@@ -41,6 +40,10 @@ class YahtzeeTestCase(unittest.TestCase):
     def test_large_straight(self):
         self.assertEqual(20, large_straight([2, 3, 4, 5, 6]))
         self.assertEqual(0, large_straight([1, 2, 3, 4, 5]))
+
+    def test_full_house(self):
+        self.assertEqual(8, full_house([1, 1, 2, 2, 2]))
+        self.assertEqual(0, full_house([4, 4, 4, 4, 4]))
 
     def test_yahtzee(self):
         self.assertEqual(50, yahtzee([3, 3, 3, 3, 3]))
