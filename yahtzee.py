@@ -60,7 +60,8 @@ def yahtzee(dice):
 
     return 0
 
-
+def chance(dice):
+    return sum(dice)
 
 
 

@@ -49,6 +49,9 @@ class YahtzeeTestCase(unittest.TestCase):
         self.assertEqual(50, yahtzee([3, 3, 3, 3, 3]))
         self.assertEqual(0, yahtzee([1, 3, 3, 3, 3]))
 
+    def test_chance(self):
+        self.assertEqual(15, chance([3, 3, 3, 3, 3]))
+
     def test_count_dice_values(self):
         result = count_dice([3, 3, 1, 4, 5])
         self.assertEqual([1, 0, 2, 1, 1, 0], result)
