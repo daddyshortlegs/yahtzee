@@ -26,6 +26,12 @@ def three_of_a_kind(dice):
 
     return 0
 
+def four_of_a_kind(dice):
+    counts = count_dice(dice)
+    if 4 in counts:
+        return (counts.index(4) + 1) * 4
+
+    return 0
 
 
 
