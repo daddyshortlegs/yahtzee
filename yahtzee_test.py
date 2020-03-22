@@ -34,6 +34,10 @@ class YahtzeeTestCase(unittest.TestCase):
     def test_four_of_a_kind(self):
         self.assertEqual(8, four_of_a_kind([2, 2, 2, 2, 5]))
 
+    def test_small_straight(self):
+        self.assertEqual(15, small_straight([1, 2, 3, 4, 5]))
+        self.assertEqual(0, small_straight([2, 3, 4, 5, 6]))
+
     def test_yahtzee(self):
         self.assertEqual(50, yahtzee([3, 3, 3, 3, 3]))
         self.assertEqual(0, yahtzee([1, 3, 3, 3, 3]))
