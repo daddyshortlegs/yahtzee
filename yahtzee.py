@@ -18,3 +18,14 @@ def sixes(rolls):
 
 def score_singles(rolls, value):
     return sum(filter(lambda roll: roll == value, rolls))
+
+def count_dice(dice):
+    result = [0, 0, 0, 0, 0, 0]
+    for die in dice:
+        result[die - 1] += 1
+
+    return result
+
+
+
+
