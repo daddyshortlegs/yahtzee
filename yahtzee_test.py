@@ -1,7 +1,7 @@
 import unittest
 
 from yahtzee import *
-from yahtzee import fours, sixes, count_dice
+from yahtzee import fours, sixes, count_dice, three_of_a_kind
 
 
 class YahtzeeTestCase(unittest.TestCase):
@@ -25,8 +25,8 @@ class YahtzeeTestCase(unittest.TestCase):
     def test_sixes(self):
         self.assertEqual(12, sixes([6, 6, 5, 3, 5]))
 
-    # def test_chance(self):
-    #     self.assertEqual(9, three_kind([3, 3, 3, 4, 5]))
+    def test_three_of_a_kind(self):
+        self.assertEqual(9, three_of_a_kind([3, 3, 3, 4, 5]))
 
     def test_count_dice_values(self):
         result = count_dice([3, 3, 1, 4, 5])

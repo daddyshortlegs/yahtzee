@@ -19,6 +19,19 @@ def sixes(rolls):
 def score_singles(rolls, value):
     return sum(filter(lambda roll: roll == value, rolls))
 
+def three_of_a_kind(dice):
+    counts = count_dice(dice)
+    index = counts.index(3) + 1
+    return index * 3
+
+
+
+
+
+
+
+
+
 def count_dice(dice):
     result = [0, 0, 0, 0, 0, 0]
     for die in dice:
