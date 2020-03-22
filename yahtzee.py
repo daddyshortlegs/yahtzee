@@ -34,7 +34,11 @@ def x_of_a_kind(dice, value_count):
         return (counts.index(value_count) + 1) * value_count
     return 0
 
+def yahtzee(dice):
+    if 5 in count_dice(dice):
+        return 50
 
+    return 0
 
 
 

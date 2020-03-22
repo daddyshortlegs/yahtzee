@@ -31,13 +31,16 @@ class YahtzeeTestCase(unittest.TestCase):
         self.assertEqual(9, three_of_a_kind([3, 3, 3, 4, 5]))
         self.assertEqual(0, three_of_a_kind([1, 2, 3, 4, 5]))
 
+    def test_four_of_a_kind(self):
+        self.assertEqual(8, four_of_a_kind([2, 2, 2, 2, 5]))
+
+    def test_yahtzee(self):
+        self.assertEqual(50, yahtzee([3, 3, 3, 3, 3]))
+        self.assertEqual(0, yahtzee([1, 3, 3, 3, 3]))
+
     def test_count_dice_values(self):
         result = count_dice([3, 3, 1, 4, 5])
         self.assertEqual([1, 0, 2, 1, 1, 0], result)
-
-    def test_four_of_a_kind(self):
-        result = four_of_a_kind([2, 2, 2, 2, 5])
-        self.assertEqual(8, result)
 
 if __name__ == '__main__':
     unittest.main()
