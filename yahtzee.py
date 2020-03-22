@@ -21,9 +21,11 @@ def score_singles(rolls, value):
 
 def three_of_a_kind(dice):
     counts = count_dice(dice)
-    index = counts.index(3) + 1
-    return index * 3
+    if 3 in counts:
+        index = counts.index(3) + 1
+        return index * 3
 
+    return 0
 
 
 

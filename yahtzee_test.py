@@ -27,6 +27,7 @@ class YahtzeeTestCase(unittest.TestCase):
 
     def test_three_of_a_kind(self):
         self.assertEqual(9, three_of_a_kind([3, 3, 3, 4, 5]))
+        self.assertEqual(0, three_of_a_kind([1, 2, 3, 4, 5]))
 
     def test_count_dice_values(self):
         result = count_dice([3, 3, 1, 4, 5])
